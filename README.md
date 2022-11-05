@@ -54,5 +54,4 @@ Then we will calculate the distance from each color and find the shortest one.
 #Color Recognition in Real Time Using Webcam
 ---------------------------------------------
 
-![](Data/Real%20Time%20Color%20Detection%20gif.gif)
 
