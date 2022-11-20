@@ -40,7 +40,7 @@ cam = cv2.VideoCapture(0)
 r = g = b = x_position = y_position = 0
 
 index = ['color', 'name_of_the_color', 'hex', 'R', 'G', 'B']
-df = pd.read_csv('/home/jay/Documents/HCL Internship/colors.csv', names = index, header = None)
+df = pd.read_csv('/colors.csv', names = index, header = None)
 
 
 def ColorName(R,G,B):
@@ -63,8 +63,8 @@ def color_identification(event, x, y, flags, param):
 	r = int(r)
 
 
-cv2.namedWindow('Jayanth s Color recognition')
-cv2.setMouseCallback('Jayanth s Color recognition', color_identification)
+cv2.namedWindow('Color recognition')
+cv2.setMouseCallback('Color recognition', color_identification)
 
 while True:
     (grabbed, frame) = cam.read()
@@ -77,7 +77,7 @@ while True:
     if(r+g+b >= 600):
         cv2.putText(frame,text,(50,50), 2, 0.8, (0,0,0),2,cv2.LINE_AA)   
         
-    cv2.imshow('Jayanth s Color recognition',frame)
+    cv2.imshow('Color recognition',frame)
     
     if cv2.waitKey(20) & 0xFF == 27:
         break
