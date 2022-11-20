@@ -40,7 +40,7 @@ cam = cv2.VideoCapture(0)
 r = g = b = x_position = y_position = 0
 
 index = ['color', 'name_of_the_color', 'hex', 'R', 'G', 'B']
-df = pd.read_csv('/colors.csv', names = index, header = None)
+df = pd.read_csv('colors.csv', names = index, header = None)
 
 
 def ColorName(R,G,B):
